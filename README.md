@@ -5,7 +5,13 @@
 
 1. `git clone git@github.com:serbanghita/TypeScript-Builds.git`
 1. `cd TypeScript-Builds/build`
-1. Choose one build type: `AMD`, `CommonJS`, `CommonJS-Browserify`, `SystemJS`
+1. Choose one build type: 
+    1. `AMD` 
+    1. `CommonJS`
+    1. `CommonJS-Browserify`
+    1. `CommonJS-Browserify-Tsify`
+    1. `SystemJS`
+    1. `Gulp-CommonJS-Browserify-Tsify`
 1. `npm install`
 1. `npm run build`
 1. `npm run startServer`
