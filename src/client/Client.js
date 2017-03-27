@@ -13,9 +13,9 @@ var Client = (function () {
             console.log(msg);
         }
         else {
-            window.onload = function () {
+            this.utils.ready(function () {
                 document.body.innerHTML = msg;
-            };
+            });
         }
     };
     return Client;

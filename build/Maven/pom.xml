@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.github.serbanghita</groupId>
+  <artifactId>typescript.maven.example</artifactId>
+  <version>0.0.1</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <remote.repo.url>git:git@github.com:serbanghita/TypeScript-Builds.git</remote.repo.url>
+    <!-- Maybe you want to clone it in a different dir, eg. ${project.build.directory} or ${basedir} -->
+    <remote.repo.tmp.clonePath>${project.build.directory}/myapp</remote.repo.tmp.clonePath>
+    <remote.repo.tmp.appPath>${project.build.directory}/myapp/build/AMD</remote.repo.tmp.appPath>
+    <myApp.workingDir>${basedir}</myApp.workingDir>
+  </properties>
+
+  <build>
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-plugin</artifactId>
+        <version>1.9.5</version>
+        <configuration>
+          <connectionUrl>scm:${remote.repo.url}</connectionUrl>
+          <baseDir>${remote.repo.tmp.clonePath}</baseDir>
+          <checkoutDirectory>${remote.repo.tmp.clonePath}</checkoutDirectory>
+        </configuration>
+
+        <executions>
+          <execution>
+            <id>checkout</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>checkout</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.0.2</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <!-- here the phase you need -->
+            <phase>process-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${myApp.workingDir}</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${remote.repo.tmp.appPath}</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <version>1.3</version>
+
+        <configuration>
+          <workingDirectory>${myApp.workingDir}</workingDirectory>
+        </configuration>
+
+        <executions>
+
+          <execution>
+            <id>install node and npm</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>install-node-and-npm</goal>
+            </goals>
+            <configuration>
+              <nodeVersion>v6.9.4</nodeVersion>
+              <npmVersion>3.10.10</npmVersion>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>npm install</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <!-- Optional configuration which provides for running any npm command -->
+            <configuration>
+              <arguments>install</arguments>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>npm run build</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>run build</arguments>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>npm run startServer</id>
+            <phase>test-compile</phase>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>run startServer</arguments>
+            </configuration>
+          </execution>
+
+        </executions>
+      </plugin>
+
+
+
+    </plugins>
+  </build>
+</project>

@@ -14,9 +14,9 @@ export class Client {
         if (this.isNode()) {
             console.log(msg);
         } else {
-            window.onload = () => {
+            this.utils.ready(() => {
                 document.body.innerHTML = msg;
-            };
+            });
         }
     }
 }

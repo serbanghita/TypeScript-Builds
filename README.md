@@ -16,6 +16,8 @@
 1. `npm run build`
 1. `npm run startServer`
 
+@todo: discuss [breaking changes](https://github.com/Microsoft/TypeScript/wiki/Breaking-Changes).
+
 # Stats
 
 | Build  | `tsc` time |
@@ -25,7 +27,7 @@
 | `CommonJS-Browserify`  | 0.89s  |
 | `SystemJS`  | 0.99s  |
 
-Discussion about [performance](https://github.com/Microsoft/TypeScript/issues/13538).
+@todo discussion  [performance](https://github.com/Microsoft/TypeScript/issues/13538).
 
 PS: Need to automate this. Currently I manually run a command and then extract the result `cd AMD/ && tsc && cd .. && cd CommonJS && tsc && cd .. && cd CommonJS-Browserify/ && tsc && cd .. && cd SystemJS/ && tsc`
 
