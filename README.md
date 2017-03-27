@@ -12,6 +12,7 @@
     1. `CommonJS-Browserify-Tsify`
     1. `SystemJS`
     1. `Gulp-CommonJS-Browserify-Tsify`
+    1. `Maven` (with remote git repo that uses AMD)
 1. `npm install`
 1. `npm run build`
 1. `npm run startServer`
