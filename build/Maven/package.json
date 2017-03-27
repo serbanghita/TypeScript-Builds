@@ -1,7 +1,7 @@
 {
-  "name": "TypeScript-AMD",
+  "name": "TypeScript-Maven",
   "version": "1.0.0",
-  "description": "Example build of TypeScript codebase with AMD module support for browser.",
+  "description": "Example build of TypeScript codebase with AMD module support for browser build using Maven.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/serbanghita/TypeScript-Builds.git"
