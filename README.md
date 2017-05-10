@@ -1,6 +1,8 @@
 # TypeScript Builds
 > Example of TypeScript builds and workflows.
 
+> For official examples go to https://www.typescriptlang.org/samples/index.html
+
 ### Install
 
 1. `git clone git@github.com:serbanghita/TypeScript-Builds.git`
