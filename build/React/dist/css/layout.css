@@ -1,0 +1,52 @@
+.docs {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Header */
+.docs-header {
+    -webkit-box-flex: 0;
+    flex: none;
+    background-color: #eee;
+    min-height: 300px;
+}
+
+.docs-header-content {
+    -webkit-box-flex: 0;
+    flex: none;
+    background-color: rgba(0, 0, 255, 0.5);
+    border: 1px dotted blue;
+}
+
+/* Body */
+.docs-body {
+    display: flex;
+    flex: 1;
+    border: 1px dotted green;
+}
+
+.docs-body-content {
+    display: flex;
+    flex: 1;
+    border: 1px dotted green;
+}
+
+
+/* Nav */
+.docs-nav {
+    flex: 0 0 12em;
+    order: -1;
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+/* Page content */
+.docs-page-content {
+    flex: 1;
+    background-color: rgba(255, 255, 0, 0.5);
+}
