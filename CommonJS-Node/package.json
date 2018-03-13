@@ -1,0 +1,18 @@
+{
+  "name": "typescript-build-commonjs-node",
+  "version": "1.0.0",
+  "description": "Example build of TypeScript codebase with CommonJS module for node.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serbanghita/TypeScript-Builds.git"
+  },
+  "author": "Serban Ghita",
+  "license": "MIT",
+  "scripts": {
+    "tsc": "node_modules/.bin/tsc",
+    "build": "npm run tsc"
+  },
+  "devDependencies": {
+    "typescript": "^2.7.2"
+  }
+}
