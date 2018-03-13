@@ -1,20 +1,19 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "noImplicitAny": false,
-        "sourceMap": false,
-        "outDir": "dist/js",
-        "listEmittedFiles": true,
-        "pretty": true,
-        "diagnostics": true
-        // "skipLibCheck": true
-    },
-    "include": [
-        "../../src/index.ts"
-    ],
-    "exclude": [
-        "node_modules",
-        "dist"
-    ]
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "noImplicitAny": false,
+    "sourceMap": false,
+    "outDir": "dist/js",
+    "listEmittedFiles": true,
+    "pretty": true,
+    "diagnostics": false
+  },
+  "include": [
+    "./src/index.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
