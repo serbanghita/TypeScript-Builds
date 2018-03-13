@@ -1,5 +1,9 @@
-> TypeScript project manually built using CommonJS module style and ES5,
-code being bundled by Browserify.
+*Description*
+
+* TypeScript project.
+* CommonJS module style.
+* ES5 code output.
+* JS output bundled with Browserify.
 
 *Install*
 

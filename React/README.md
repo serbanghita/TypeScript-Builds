@@ -10,4 +10,4 @@
 
 * `npm install`
 * `npm run build`
-* `npm run dev` to start the server at `http://localhost:3000`
+* `npm run dev`

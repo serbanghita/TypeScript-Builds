@@ -12,7 +12,7 @@
     <remote.repo.url>git:git@github.com:serbanghita/TypeScript-Builds.git</remote.repo.url>
     <!-- Maybe you want to clone it in a different dir, eg. ${project.build.directory} or ${basedir} -->
     <remote.repo.tmp.clonePath>${project.build.directory}/myapp</remote.repo.tmp.clonePath>
-    <remote.repo.tmp.appPath>${project.build.directory}/myapp/build/AMD</remote.repo.tmp.appPath>
+    <remote.repo.tmp.appPath>${project.build.directory}/myapp/build/AMD-Browser</remote.repo.tmp.appPath>
     <myApp.workingDir>${basedir}</myApp.workingDir>
   </properties>
 
@@ -118,7 +118,7 @@
               <goal>npm</goal>
             </goals>
             <configuration>
-              <arguments>run startServer</arguments>
+              <arguments>run dev</arguments>
             </configuration>
           </execution>
 

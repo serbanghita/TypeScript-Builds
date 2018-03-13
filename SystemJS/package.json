@@ -1,5 +1,5 @@
 {
-  "name": "TypeScript-SystemJS",
+  "name": "typescript-systemjs",
   "version": "1.0.0",
   "description": "Example build of TypeScript codebase with SystemJS module support for browser.",
   "repository": {
@@ -11,13 +11,12 @@
   "scripts": {
     "tsc": "node_modules/.bin/tsc",
     "build": "cp node_modules/systemjs/dist/system.js dist/js && npm run tsc",
-    "startServer": "node_modules/.bin/browser-sync start --s dist --f dist --port 3000 --reload-debounce 1500 --no-ui",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node_modules/.bin/browser-sync start --s dist --f dist --port 3000 --reload-debounce 1500 --no-ui"
   },
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
     "systemjs": "^0.19.47",
-    "typescript": "^2.2.1"
+    "typescript": "^2.7.2"
   }
 }

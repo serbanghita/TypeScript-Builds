@@ -1,9 +1,9 @@
 *Description*
 
 * TypeScript project.
-* CommonJS module style.
+* SystemJS module style.
 * ES5 code output.
-* JS output bundled with Browserify and Tsify through a Gulp job.
+* JS output bundled with tsc compiler.
 
 *Install*
 

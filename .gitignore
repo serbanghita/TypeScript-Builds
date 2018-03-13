@@ -1,10 +1,4 @@
 .idea/
 node_modules/
-build/AMD/node_modules/
-build/CommonJS/node_modules/
-build/SystemJS/node_modules/
-/build/Maven/node
-/build/Maven/target
-build/Maven/dist/
-build/Maven/package.json
-build/Maven/tsconfig.json
+Maven/node
+Maven/target
