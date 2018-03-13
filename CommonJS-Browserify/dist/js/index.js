@@ -1,6 +1,7 @@
 "use strict";
-var Client_1 = require("./client/Client");
-var Utils_1 = require("./common/Utils");
-var u = new Utils_1.Utils();
-var c = new Client_1.Client(u);
+Object.defineProperty(exports, "__esModule", { value: true });
+var Utils_1 = require("./Utils");
+var App_1 = require("./App");
+var u = new Utils_1.default();
+var c = new App_1.default(u);
 c.hello();
