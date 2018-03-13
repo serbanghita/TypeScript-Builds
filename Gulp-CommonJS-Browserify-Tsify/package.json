@@ -1,7 +1,7 @@
 {
-  "name": "TypeScript-Gulp-CommonJS-Browserify-Tsify",
+  "name": "typescript-gulp-commonjs-browserify-tsify",
   "version": "1.0.0",
-  "description": "Example build of TypeScript codebase with CommonJS module support via Gulp.",
+  "description": "Example build of TypeScript codebase with CommonJS module support via Gulp and Browserify with Tsify.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/serbanghita/TypeScript-Builds.git"
@@ -11,15 +11,14 @@
   "scripts": {
     "tsc": "node_modules/.bin/tsc",
     "build": "gulp build",
-    "startServer": "browser-sync start --s \"dist\" --f \"dist\" --port 3000 --reload-debounce 500 --no-ui",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "browser-sync start --s \"dist\" --f \"dist\" --port 3000 --reload-debounce 500 --no-ui"
   },
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
     "gulp": "^3.9.1",
     "tsify": "^3.0.1",
-    "typescript": "^2.2.1",
+    "typescript": "^2.7.2",
     "vinyl-source-stream": "^1.1.0"
   }
 }

@@ -4,8 +4,8 @@ var source = require("vinyl-source-stream");
 
 gulp.task("build", function() {
     browserify({debug: true})
-    .add("../../src/index.ts")
-    .plugin('tsify')
+    .add("./src/index.ts")
+    .plugin("tsify")
     .bundle()
     // log errors if they happen
     .on("error", function(e){
