@@ -1,0 +1,23 @@
+{
+  "name": "typescript-systemjs",
+  "version": "1.0.0",
+  "description": "Example build of TypeScript codebase transpiled and bundled with Webpack.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serbanghita/TypeScript-Builds.git"
+  },
+  "author": "Serban Ghita",
+  "license": "MIT",
+  "scripts": {
+    "tsc": "node_modules/.bin/tsc",
+    "build": "node_modules/.bin/webpack",
+    "dev": "node_modules/.bin/browser-sync start --s dist --f dist --port 3000 --reload-debounce 1500 --no-ui"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^4.0.1",
+    "browser-sync": "^2.18.8",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11"
+  }
+}
