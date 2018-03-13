@@ -1,6 +1,5 @@
 # TypeScript Builds
 > Example of TypeScript builds and workflows.
-
 > For official examples go to https://www.typescriptlang.org/samples/index.html
 
 ## Examples
@@ -29,7 +28,6 @@ If you want to start from scratch a fresh npm project follow these steps:
 1. Run `node_modules/.bin/tsc`
 
 
-TODO
-====
+## TODO
 
 * CommonJS + Browser - https://github.com/volojs/create-template
