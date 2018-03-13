@@ -1,5 +1,5 @@
 {
-  "name": "TypeScript-Maven",
+  "name": "typescript-build-amd-browser",
   "version": "1.0.0",
   "description": "Example build of TypeScript codebase with AMD module support for browser build using Maven.",
   "repository": {
@@ -11,7 +11,7 @@
   "scripts": {
     "tsc": "node_modules/.bin/tsc",
     "build": "cp node_modules/requirejs/require.js dist/js && npm run tsc",
-    "startServer": "node_modules/.bin/browser-sync start --s dist --f dist --port 3000 --reload-debounce 1500 --no-ui",
+    "dev": "node_modules/.bin/browser-sync start --s dist --f dist --port 3000 --reload-debounce 1500 --no-ui",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

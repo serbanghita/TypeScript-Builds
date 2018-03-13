@@ -1,6 +1,6 @@
-import {Client} from "./client/Client";
-import {Utils} from "./common/Utils";
+import Utils from "./Utils";
+import App from "./App";
 
 let u = new Utils();
-let c = new Client(u);
+let c = new App(u);
 c.hello();

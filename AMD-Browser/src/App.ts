@@ -1,22 +1,14 @@
-import {Utils} from "../common/Utils";
+import Utils from "./Utils";
 
-export class Client {
+export default class App {
     constructor(protected utils: Utils) {
 
     }
 
-    private isNode(): boolean {
-        return (typeof document === "undefined");
-    }
-
     public hello() {
-        let msg = `Hello there! Random: ${this.utils.randomInt(0, 100)}`;
-        if (this.isNode()) {
-            console.log(msg);
-        } else {
-            this.utils.ready(() => {
-                document.body.innerHTML = msg;
-            });
-        }
+      let msg = `Hello there! Random: ${this.utils.randomInt(0, 100)}`;
+      this.utils.ready(() => {
+        document.body.innerHTML = msg;
+      });
     }
 }
