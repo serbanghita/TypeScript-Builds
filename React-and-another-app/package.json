@@ -1,0 +1,28 @@
+{
+  "name": "typescript-two-apps-regular-and-react",
+  "version": "1.0.0",
+  "description": "React with TypeScript example.",
+  "scripts": {
+    "tsc": "$(npm bin)/tsc",
+    "build": "./node_modules/.bin/webpack --mode development",
+    "dev": "./node_modules/.bin/webpack-dev-server --open --watch-content-base"
+  },
+  "author": "Serban Ghita",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^15.0.24",
+    "@types/react-dom": "^15.5.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^4.0.1",
+    "source-map-loader": "^0.2.3",
+    "tslint": "^5.2.0",
+    "tslint-react": "^3.0.0",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1"
+  }
+}
