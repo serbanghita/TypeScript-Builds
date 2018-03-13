@@ -1,6 +1,13 @@
-# React with TypeScript example
-> React.js build using TypeScript
+*Description*
 
-1. `npm install`
-1. `gulp`
-1. `open http://127.0.0.1:3000/index.html`
+* React app.
+* TypeScript project.
+* SystemJS module style.
+* ES5 code output.
+* JS output bundled by Webpack.
+
+*Install*
+
+* `npm install`
+* `npm run build`
+* `npm run dev` to start the server at `http://localhost:3000`

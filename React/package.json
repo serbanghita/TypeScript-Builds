@@ -4,9 +4,8 @@
   "description": "React with TypeScript example.",
   "scripts": {
     "tsc": "$(npm bin)/tsc",
-    "build": "npm run tsc && npm run browserify",
-    "browserify": "$(npm bin)/browserify dist/js/index.js -o dist/js/bundle.browserify.js",
-    "serve": "$(npm bin)/browser-sync start --s dist --f dist --port 3000 --reload-debounce 200 --no-ui"
+    "build": "./node_modules/.bin/webpack --mode development",
+    "dev": "./node_modules/.bin/webpack-dev-server --open --watch-content-base"
   },
   "author": "Serban Ghita",
   "license": "MIT",
@@ -17,14 +16,13 @@
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.8",
-    "browserify": "^14.3.0",
-    "gulp": "^3.9.1",
-    "tsc": "^1.20150623.0",
-    "tsify": "^3.0.1",
+    "awesome-typescript-loader": "^4.0.1",
+    "source-map-loader": "^0.2.3",
     "tslint": "^5.2.0",
     "tslint-react": "^3.0.0",
-    "typescript": "^2.3.2",
-    "vinyl-source-stream": "^1.1.0"
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1"
   }
 }
