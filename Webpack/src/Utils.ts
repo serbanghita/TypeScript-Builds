@@ -9,23 +9,21 @@ export default class Utils {
     }
 
     public ready(fn: any) {
+        if ( document.addEventListener ){
+            // Use the handy event callback
+            // document.addEventListener( "DOMContentLoaded", fn, false );
 
-    if ( document.addEventListener ){
-        // Use the handy event callback
-        // document.addEventListener( "DOMContentLoaded", fn, false );
+            // A fallback to window.onload, that will always work
+            window.addEventListener("load", fn, false);
 
-        // A fallback to window.onload, that will always work
-        window.addEventListener("load", fn, false);
+            // If IE event model is used
+        } else {
 
-        // If IE event model is used
-    } else {
+            // Ensure firing before onload, maybe late but safe also for iframes
+            // document.attachEvent( "onreadystatechange", fn );
 
-        // Ensure firing before onload, maybe late but safe also for iframes
-        // document.attachEvent( "onreadystatechange", fn );
-
-        // A fallback to window.onload, that will always work
-        (<any>window).attachEvent("onload", fn);
+            // A fallback to window.onload, that will always work
+            (<any>window).attachEvent("onload", fn);
+        }
     }
-
-}
 }
