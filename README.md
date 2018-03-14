@@ -1,6 +1,6 @@
 # TypeScript Builds
 > Example of TypeScript builds and workflows.
-> For official examples go to https://www.typescriptlang.org/samples/index.html
+> For the official examples go to https://www.typescriptlang.org/samples/index.html
 
 ## Examples
 
@@ -16,7 +16,7 @@
 * [React app + Normal app](./React-and-another-app)
 
 
-If you want to start from scratch a fresh npm project follow these steps:
+If you want to start a fresh npm project from scratch, here are the steps to follow:
 
 1. `mkdir myProject && cd myProject`
 1. `mkdir src` (put your `.ts` files here)
