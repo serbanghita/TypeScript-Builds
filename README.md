@@ -31,3 +31,4 @@ If you want to start a fresh npm project from scratch, here are the steps to fol
 ## TODO
 
 * CommonJS + Browser - https://github.com/volojs/create-template
+* Rollup https://medium.com/@paleo.said/how-to-bundle-an-npm-package-with-typescript-and-rollup-f80e0f196189
