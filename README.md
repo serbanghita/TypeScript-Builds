@@ -27,6 +27,9 @@ If you want to start a fresh npm project from scratch, here are the steps to fol
 1. Edit `tsconfig.json`
 1. Run `node_modules/.bin/tsc`
 
+## On modules
+
+[Choosing JavaScript Module Dependency Syntax](http://blog.calyptus.eu/seb/2011/10/choosing-a-javascript-module-syntax/)
 
 ## TODO
 
